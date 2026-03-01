@@ -7,30 +7,21 @@
 ![Leaflet](https://img.shields.io/badge/Leaflet-199918?style=for-the-badge&logo=Leaflet&logoColor=white)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-**A high-performance, framework-free intelligence suite for modern investors.**
-
-NewsIntel bridges the gap between **Global Geopolitics**, **Market Sentiment**, and **Equity Analysis**. Built from the ground up to be lightweight and dependency-free, it provides a "single pane of glass" view into the forces moving US and Singapore markets.
+A browser-based financial intelligence platform that brings together stock analysis, news impact assessment, and global conflict tracking into a single cohesive interface. **Built entirely with vanilla HTML, CSS, and JavaScript** — no frameworks, no build tools, and no dependencies beyond a map library.
 
 ---
 
-## 🚀 The "Vanilla" Philosophy
+## 🛠️ Technologies Used
 
-In a world of bloated frameworks, NewsIntel is built on the belief that the modern browser is already powerful enough.
-* **Zero Frameworks:** No React, Vue, or Angular.
-* **Zero Build Tools:** No Webpack, Vite, or NPM dependencies.
-* **Pure Performance:** Instant load times using native Web APIs.
-
----
-
-## 🛠️ Tech Stack & Architecture
-
-| Layer | Technology | Implementation Detail |
-| :--- | :--- | :--- |
-| **Logic** | `Vanilla JS (ES6+)` | Custom state management and DOM reconciliation. |
-| **Visuals** | `HTML5 Canvas` | High-fidelity sparklines & price projections drawn pixel-by-pixel. |
-| **Mapping** | `Leaflet.js` | Interactive geopolitical risk overlays with custom pulse animations. |
-| **Design** | `CSS3 + Variables` | A unified design system using CSS tokens for dark-mode consistency. |
-| **Connectivity** | `CORS Proxies` | Real-time news fetching via Allorigins and Corsproxy.io. |
+| Layer | Technology |
+|---|---|
+| **Structure** | HTML5 |
+| **Styling** | CSS3 — Custom Properties, Flexbox, Grid, animations |
+| **Logic** | Vanilla JavaScript (ES6+) |
+| **Maps** | Leaflet.js 1.9.4 |
+| **Charts** | HTML5 Canvas API |
+| **Fonts** | Google Fonts — IBM Plex Mono, Syne, DM Sans, Bebas Neue, Manrope |
+| **Fetching** | CORS proxy APIs (allorigins, codetabs, corsproxy.io) |
 
 ---
 
@@ -43,13 +34,11 @@ In a world of bloated frameworks, NewsIntel is built on the belief that the mode
 * **Deep-Dive Modals:** Detailed risk assessment, P/E ratios, and dividend yields.
 * **Market Coverage:** 🇺🇸 (NVDA, AAPL, TSLA) | 🇸🇬 (DBS, SIA, ST Engineering).
 
-
-
 ### 2. Market Impact Analyzer
 *Quantifying the narrative: How news moves the needle.*
-* **Triple-Threat Input:** Support for direct text paste, `.pdf`/`.txt` uploads, or URL fetching.
+* **Triple-Threat Input:** Support for direct text paste, `.pdf`/`.txt` uploads, or URL fetching via CORS proxy.
 * **Sentiment Engine:** Rule-based NLP identifying Bullish/Bearish shifts in specific sectors.
-* **Transmission Logic:** Maps macro events (e.g., "Rate Hikes") to specific sector pressure (e.g., "Tech").
+* **Transmission Logic:** Maps macro events (e.g., "Rate Hikes") to specific sector pressure.
 * **Stale Detection:** Automatically flags news >7 days old as "already priced in."
 
 ### 3. Global Conflict Tracker
@@ -59,39 +48,52 @@ In a world of bloated frameworks, NewsIntel is built on the belief that the mode
 * **The Singapore Connection:** Specialized links for conflicts impacting local trade (Red Sea, South China Sea).
 * **Fly-to Interaction:** Click a conflict to automatically zoom the viewport to the epicenter.
 
+---
 
+## 🏗️ The Process of Building
+
+The project grew page by page, each one teaching something new.
+
+1.  **Stock Intelligence:** Started with a simple grid of stock cards. The challenge was designing a readable dark theme for dense data and drawing sparklines using the Canvas API directly.
+2.  **Market Impact Analyzer:** Built to explore the "why" behind price movements. The core challenge was building a keyword-matching sentiment engine that maps financial terminology to market outcomes.
+3.  **Conflict Tracker:** Introduced the first external library, Leaflet.js. Focused on customizing map tiles, creating `divIcon` markers with CSS animations, and managing complex layer visibility.
+
+Throughout the build, a shared design system was maintained—using the same dark palette and monospace labels—to ensure the suite feels like a single, cohesive product.
 
 ---
 
-## 🧠 What I Learned
+## 🧠 Knowledge Gained
 
-### Financial Intelligence
-* **Macro-Transmission:** How the Federal Reserve's discount rate reprices growth equities.
-* **Sector Rotation:** Tracking the flight to quality during geopolitical volatility.
+### Finance & Markets
+* **Valuation Metrics:** Deep understanding of P/E ratios, dividend yields, and beta.
+* **Rate Sensitivity:** How Fed decisions reprice equities through the discount rate.
 * **Singapore Nuance:** Analyzing the unique impact of Taiwan Strait or Red Sea stability on SG port throughput.
+* **Geopolitical Risk:** Translating conflict into oil price premiums and safe-haven flows.
 
-### Technical Engineering
-* **From-Scratch Charting:** Building a charting engine using the Canvas API instead of a library.
-* **CORS Mastery:** Navigating cross-origin restrictions to aggregate news data.
-* **Design Systems:** Implementing unified themes using CSS Custom Properties (`--accent`, `--bg-dark`).
+### Technology
+* **Canvas API:** Drawing polylines and dashed projections without a charting library.
+* **CORS Proxies:** Navigating cross-origin restrictions to aggregate news data.
+* **DOM Management:** Efficiently rendering and re-rendering lists and modals in plain JS.
+* **CSS Design Tokens:** Using custom properties (`--accent`, `--bg-dark`) for theme consistency.
 
 ---
 
 ## 🔮 Future Roadmap
 
-- [ ] **Live API Integration:** Transition from static data to Alpha Vantage/Polygon.io.
-- [ ] **LLM Integration:** Connect Claude/GPT-4 API for deep semantic news analysis.
-- [ ] **Portfolio Stress Testing:** Simulate how a specific conflict would impact user holdings.
-- [ ] **Persistent Watchlists:** `localStorage` integration for user-saved tickers.
+- [ ] **Live Market Data:** Replace static prices with a real financial API (Alpha Vantage/Polygon.io).
+- [ ] **AI-Powered Analysis:** Integrate the Claude API for deep semantic news analysis.
+- [ ] **Persistent Watchlist:** Save user-selected tickers using `localStorage`.
+- [ ] **Portfolio Tracker:** Input holdings and see aggregate exposure to geopolitical risks.
+- [ ] **Global Expansion:** Expand beyond US and Singapore to cover EU, Japan, and Hong Kong.
 
 ---
 
 ## 📂 Project Structure
 
-* `stock intelligence` — Equity dashboard & signal engine.
-* `news market analyzer` — Sentiment analysis & news processing tool.
-* `conflict tracker` — Geopolitical map (Requires internet for CartoDB tiles). Specifically on how the world conflict will impact US and SG.
+| File | Page |
+|---|---|
+| `stockintelligence.html` | Stock Intelligence dashboard |
+| `news-marketanalyzer.html` | Market Impact Analyzer |
+| `conflict-tracker.html` | Global Conflict Tracker |
 
----
-
-Built with ☕ and Vanilla JavaScript.
+> **Note:** The Conflict Tracker requires an internet connection to load the CartoDB map tiles. Other pages are self-contained.
