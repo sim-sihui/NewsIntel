@@ -1,3 +1,5 @@
+*⚠️ Note: The core development of this project took place in a private repository to protect API keys and sensitive configuration. This public version represents the finalized production build.*
+
 # 📈 NewsIntel — Financial Intelligence Dashboard
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=vercel)](https://newsintel-mu.vercel.app/)
